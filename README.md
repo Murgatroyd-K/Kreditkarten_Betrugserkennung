@@ -11,7 +11,7 @@ Dieses Projekt zielt darauf ab, betrügerische Transaktionen in Kreditkartendate
 ## Technologien und Werkzeuge
 - **Programmiersprache**: Python
 - **Hauptbibliotheken**: Pyspark
-- **Datenvisualisierung**: Matplotlib, Seaborn
+- **Datenvisualisierung**: Matplotlib
 
 ## Daten
 Der Datensatz enthält Transaktionen über zwei Tage mit 492 Betrugsfällen aus insgesamt 284,807 Transaktionen. Die Features 'Time' und 'Amount' sind die einzigen, die nicht durch PCA transformiert wurden.
