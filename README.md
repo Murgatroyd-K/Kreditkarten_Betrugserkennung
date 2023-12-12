@@ -20,7 +20,7 @@ Der Datensatz enthält Transaktionen über zwei Tage mit 492 Betrugsfällen aus 
 Es werden verschiedene Klassifizierungsalgorithmen getestet und verglichen, einschließlich, aber nicht beschränkt auf:
 - Random Forest
 - Gradient Boosting
-- 
+
 ## Datenquelle
 Die Daten für dieses Projekt stammen von Kaggle, einer Online-Plattform für Datenwissenschaft und Maschinelles Lernen. Sie können den Originaldatensatz unter dem folgenden Link finden:
 
