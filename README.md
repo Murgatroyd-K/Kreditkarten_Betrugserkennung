@@ -3,7 +3,7 @@
 ##Inhaltsverzeichnis
   - [Projektübersicht](#Projektübersicht)
   - [Ziele](#Ziele)
-  - [Technologien und Werkzeuge](#Technologien_und_Werkzeuge)
+  - [Technologien_und_Werkzeuge](#Technologien_und_Werkzeuge)
   - [Daten](#Daten)
   - [Modellierung](#Modellierung)
   - [Ablauf](#Ablauf)
@@ -13,9 +13,9 @@
 Dieses Projekt zielt darauf ab, betrügerische Transaktionen in Kreditkartendaten unter Verwendung fortschrittlicher Machine Learning-Techniken zu identifizieren. Der verwendete Datensatz besteht aus Transaktionen von europäischen Karteninhabern im September 2013, die mithilfe der Hauptkomponentenanalyse (PCA) transformiert wurden, um die Anonymität der Nutzer zu gewährleisten.
 
 ## Ziele
-- **Entwicklung eines präzisen Klassifizierungsmodells**: Erstellung eines Modells, das in der Lage ist, zwischen betrügerischen und legitimen Transaktionen effektiv zu unterscheiden.
-- **Adressierung der Unausgeglichenheit im Datensatz**: Implementierung von Strategien, um mit der starken Unausgeglichenheit im Datensatz umzugehen, wobei betrügerische Transaktionen nur einen kleinen Teil der Daten ausmachen.
-- **Evaluierung der Modellleistung**: Verwendung geeigneter Metriken wie der Area Under the Precision-Recall Curve (AUPRC), um die Leistung des Modells zu beurteilen.
+- **Entwicklung eines präzisen Klassifizierungsmodells**: Erarbeitung eines Modells, das effizient zwischen betrügerischen und legitimen Transaktionen unterscheiden kann.
+- **Adressierung der Unausgeglichenheit im Datensatz**: Umsetzung von Techniken zur Bewältigung der starken Asymmetrie im Datensatz, insbesondere der geringen Anzahl an Betrugsfällen.
+- **Evaluierung der Modellleistung**: Fokus auf Schlüsselmetriken wie Precision, Recall und F1-Score, um eine umfassende Bewertung der Modellgenauigkeit und -zuverlässigkeit sicherzustellen, insbesondere im Hinblick auf die Identifizierung von Betrugsfällen.
 
 ## Technologien_und_Werkzeuge
 - **Programmiersprache**: Python
@@ -43,6 +43,27 @@ Zu Beginn des Projekts konzentrierte ich mich auf die eingehende Analyse der vor
 Für das Merkmal 'Amount' entschied ich mich für die Anwendung des RobustScaler, um die Daten zu normalisieren. Diese Methode wurde gewählt, da sie effizient mit Ausreißern umgeht, die in finanziellen Transaktionsdaten häufig vorkommen. Durch die Skalierung der 'Amount'-Daten konnte ich sicherstellen, dass sie in einem Bereich liegen, der für maschinelle Lernalgorithmen zugänglicher ist.
 
 Beim Umgang mit dem Merkmal 'Time' ging ich anders vor. Hier skalierte ich die Werte in einen Bereich zwischen 0 und 1. Diese Normalisierung war entscheidend, um die zeitliche Dimension der Daten handhabbar zu machen und eine Überbetonung dieses Merkmals im Vergleich zu den anderen transformierten Merkmalen zu vermeiden.
+
++-------+------------------+	+-------+------------------+
+|summary|            Amount|	|summary|       Scal_Amount|
++-------+------------------+	+-------+------------------+
+|  count|            284807|	|  count|            284807|
+|   mean| 88.34961925093698|	|   mean| 1.237562953507917|
+| stddev|250.12010924018836| 	| stddev| 3.503573459030513|
+|    min|               0.0| 	|    min|               0.0|
+|    max|          25691.16|  |    max|359.87057010785827|
++-------+------------------+	+-------+------------------+
+
++-------+------------------+	+-------+------------------+
+|summary|              Time|	|summary|         Scal_Time|
++-------+------------------+	+-------+------------------+
+|  count|            284807|	|  count|            284807|
+|   mean| 94813.85957508067|	|   mean| 0.548716720537296|
+| stddev|47488.145954566266|	| stddev|0.2748283829955438|
+|    min|               0.0|	|    min|               0.0|
+|    max|          172792.0|	|    max|               1.0|
++-------+------------------+	+-------+------------------+
+
 
 ### 2. Aufsetzen der ML Modelle
 Nach der sorgfältigen Vorbereitung und Normalisierung der Daten habe ich mich darauf konzentriert, verschiedene Machine Learning-Modelle zu evaluieren, um das Potenzial jeder Methode in Bezug auf die spezifischen Anforderungen des Projekts zu bestimmen. Zu diesem Zweck habe ich folgende Modelle implementiert:
