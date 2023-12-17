@@ -3,7 +3,7 @@
 ##Inhaltsverzeichnis
   - [Projektübersicht](#Projektübersicht)
   - [Ziele](#Ziele)
-  - [Technologien und Werkzeuge](#Technologien und Werkzeuge)
+  - [Technologien und Werkzeuge](#Technologien_und_Werkzeuge)
   - [Daten](#Daten)
   - [Modellierung](#Modellierung)
   - [Ablauf](#Ablauf)
@@ -17,7 +17,7 @@ Dieses Projekt zielt darauf ab, betrügerische Transaktionen in Kreditkartendate
 - **Adressierung der Unausgeglichenheit im Datensatz**: Implementierung von Strategien, um mit der starken Unausgeglichenheit im Datensatz umzugehen, wobei betrügerische Transaktionen nur einen kleinen Teil der Daten ausmachen.
 - **Evaluierung der Modellleistung**: Verwendung geeigneter Metriken wie der Area Under the Precision-Recall Curve (AUPRC), um die Leistung des Modells zu beurteilen.
 
-## Technologien und Werkzeuge
+## Technologien_und_Werkzeuge
 - **Programmiersprache**: Python
 - **Hauptbibliotheken**: Pyspark
 - **Datenvisualisierung**: Matplotlib,Databricks
