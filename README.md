@@ -12,6 +12,7 @@
     - [3. Downsampling](#3._Downsampling)
   - [Ergebnis](#Ergebnis)
   - [Weiter Schritte](#Weiter_Schritte)
+  - [Data Bricks Notebook](###Link_zum_Databricks_Notebook)
 
 ## Projektübersicht
 Dieses Projekt zielt darauf ab, betrügerische Transaktionen in Kreditkartendaten unter Verwendung fortschrittlicher Machine Learning-Techniken zu identifizieren. Der verwendete Datensatz besteht aus Transaktionen von europäischen Karteninhabern im September 2013, die mithilfe der Hauptkomponentenanalyse (PCA) transformiert wurden, um die Anonymität der Nutzer zu gewährleisten.
@@ -129,3 +130,6 @@ Um die Leistung unseres Klassifikationsmodells zu verbessern und es weiter zu op
 Zunächst ist es wichtig, das Hyperparameter-Tuning systematisch anzugehen. Dafür können wir Techniken wie Grid Search oder Random Search nutzen. Diese Methoden ermöglichen es, verschiedene Kombinationen von Hyperparametern systematisch zu testen.
 Konkret sollten wir uns auf Schlüsselparameter wie die Lernrate, die Anzahl der Bäume in Entscheidungsbaum-basierten Modellen oder die Anzahl der Schichten und Neuronen in neuronalen Netzen konzentrieren.
 Der Plan wäre, mit einem breiten Spektrum an Parametereinstellungen zu beginnen und diese allmählich zu verfeinern, um die Kombination zu finden, die die beste Leistung zeigt.
+
+## Link zum Databricks Notebook
+https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/1881572392991630/2975787479060580/5681538385804398/latest.html
