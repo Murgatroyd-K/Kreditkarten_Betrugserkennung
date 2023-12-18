@@ -1,6 +1,7 @@
 # Kreditkarten-Betrugserkennung
 ![Uploading DALL·E 2023-12-18 12.32.51 - A banner depicting the theme of credit card fraud. The image features a large, ominous-looking credit card casting a shadow over a background of scatt.png…]()
 
+
 ## Inhaltsverzeichnis
   - [Projektübersicht](#Projektübersicht)
   - [Ziele](#Ziele)
