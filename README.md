@@ -46,7 +46,7 @@ Es werden verschiedene Klassifizierungsalgorithmen getestet und verglichen, eins
 
 1. ## Analyse und transformieren der Quelldaten
 
-Zu Beginn des Projekts konzentrierte ich mich auf die eingehende Analyse der vorhandenen Daten. Dabei stellte ich fest, dass die meisten Spalten der Daten mittels Principal Component Analysis (PCA) transformiert wurden. Dies beschränkte die unmittelbare Interpretierbarkeit der Daten, was eine Herausforderung darstellte. Zwei Merkmale jedoch,'Class', 'Time' und 'Amount', waren von dieser Transformation ausgenommen.
+Zu Beginn des Projekts widmete ich mich einer gründlichen Analyse der vorliegenden Daten. Dabei bemerkte ich, dass die Mehrheit der Datenfelder transformiert worden war, was ihre unmittelbare Interpretierbarkeit einschränkte und eine Herausforderung darstellte. Die Attribute 'Class', 'Time' und 'Amount' waren jedoch von dieser Transformation ausgenommen.
 
 ![hist_all_with-back](https://github.com/Murgatroyd-K/Kreditkarten_Betrugserkennung/assets/76660447/468a664c-fdf3-410d-b6b4-699a37402e8b)
 
