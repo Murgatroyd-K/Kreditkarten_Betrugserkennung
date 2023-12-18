@@ -97,5 +97,35 @@ Die Ergebnisse dieses zweiten Trainingsdurchlaufs waren aufschlussreich und zeig
 
 
 ## Ergebnis
+Die Bewertung der Modellleistung von dem Gradient Boosting Model zeigt, dass das Downsampling des Datensatzes, bei dem die Mehrheitsklasse reduziert wird, um ein ausgeglicheneres Verhältnis zwischen den Klassen zu erreichen, zu unterschiedlichen Ergebnissen führt. Das Modell erzielt für die Klasse 0.0 nach dem Downsampling eine Präzision von nahezu 1,0 und einen Recall von etwa 0,944, was auf eine effektive Erkennung der tatsächlichen Fälle der Mehrheitsklasse hinweist, mit einer hohen Vermeidungsrate von Falsch-Positiven. Der F1 Score von rund 0,971 bestätigt diese hohe Leistung.
+
+Für die Klasse 1.0, die potenziell betrügerische Überweisungen darstellt, zeigt das Modell nach dem Downsampling einen extrem hohen Recall von 0,975, was bedeutet, dass fast alle tatsächlichen Betrugsfälle identifiziert werden. Allerdings ist die Präzision mit einem Wert von 0,024 sehr gering, was auf eine hohe Anzahl von Falsch-Positiven hinweist; die meisten der als Betrug erkannten Fälle sind tatsächlich keine. Dies resultiert in einem niedrigen F1 Score von ungefähr 0,047, was auf eine suboptimale Balance zwischen Precision und Recall hindeutet.
+
+Ohne Downsampling weist das Modell für die Klasse 0.0 nahezu perfekte Präzision und Recall auf, was sich in einem F1 Score von ungefähr 0,999 widerspiegelt, ein Indikator für eine nahezu fehlerfreie Klassifikation. Bei der Klasse 1.0 ist die Präzision mit einem Wert von rund 0,941 deutlich höher als beim downgesampelten Modell, während der Recall auf 0,8 sinkt. Der daraus resultierende F1 Score von etwa 0,865 zeigt eine wesentlich bessere Balance zwischen Precision und Recall als beim downgesampelten Modell.
+
+Diese Ergebnisse verdeutlichen, wie entscheidend die Wahl der Datenvorbereitungsmethoden für die Modellleistung ist. Während das Downsampling dazu beiträgt, die Erkennung seltener Ereignisse zu maximieren, kann es gleichzeitig die Anzahl der Falsch-Positiven erhöhen, was in der Praxis zu zusätzlichem Aufwand bei der Überprüfung der als betrügerisch gekennzeichneten Transaktionen führen kann. Umgekehrt kann ein unausgeglichener Datensatz ohne Downsampling zu einer höheren Genauigkeit bei der Identifizierung von Betrugsfällen führen, jedoch auf Kosten einer potenziell niedrigeren Entdeckungsrate. Dies betont die Notwendigkeit, eine ausgewogene Strategie zu finden, die sowohl hohe Präzision als auch hohen Recall bietet, um die Effizienz und Wirksamkeit in der Betrugserkennung zu optimieren.
+
+Auf Basis dieser Beobachtungen und der Tatsache, dass das Gradient Boosting Modell die besten Werte auf den Validierungsdaten lieferte, wurde dieses Modell ausgewählt, um auf dem Testdatensatz angewendet zu werden.
+
+Das Ergbnis mit den Testdaten Ergibt:
+
+Gradient Boosting ohne Downsampling:
+
+| Label | Precision          | Recall             | F1 Score          |
+|-------|--------------------|--------------------|-------------------|
+| 0.0   | 0.9997161711487973 | 0.9999290276792051 | 0.9998225880850158|
+| 1.0   | 0.9411764705882353 | 0.8                | 0.8648648648648648|
+
+Gradient Boosting mit Downsampling:
+
+| Label | Precision              | Recall             | F1 Score          |
+|-------|------------------------|--------------------|-------------------|
+| 0.0   | 0.9999624173180999     | 0.944180269694819  | 0.9712710812586699|
+| 1.0   | 0.024193548387096774   | 0.975              | 0.0472154963680387|
 
 ## Weiter Schritte
+Um die Leistung unseres Klassifikationsmodells zu verbessern und es weiter zu optimieren, sollten wir uns auf Hyperparameter-Tuning konzentrieren:
+
+Zunächst ist es wichtig, das Hyperparameter-Tuning systematisch anzugehen. Dafür können wir Techniken wie Grid Search oder Random Search nutzen. Diese Methoden ermöglichen es, verschiedene Kombinationen von Hyperparametern systematisch zu testen.
+Konkret sollten wir uns auf Schlüsselparameter wie die Lernrate, die Anzahl der Bäume in Entscheidungsbaum-basierten Modellen oder die Anzahl der Schichten und Neuronen in neuronalen Netzen konzentrieren.
+Der Plan wäre, mit einem breiten Spektrum an Parametereinstellungen zu beginnen und diese allmählich zu verfeinern, um die Kombination zu finden, die die beste Leistung zeigt.
