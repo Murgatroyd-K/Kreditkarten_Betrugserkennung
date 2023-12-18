@@ -1,4 +1,4 @@
-[df_result_down.csv](https://github.com/Murgatroyd-K/Kreditkarten_Betrugserkennung/files/13702269/df_result_down.csv)[df_result.csv](https://github.com/Murgatroyd-K/Kreditkarten_Betrugserkennung/files/13702266/df_result.csv)# Kreditkarten-Betrugserkennung
+# Kreditkarten-Betrugserkennung
 
 ## Inhaltsverzeichnis
   - [Projektübersicht](#Projektübersicht)
@@ -82,7 +82,7 @@ Nach der sorgfältigen Vorbereitung und Normalisierung der Daten habe ich mich d
 Bei der Analyse der Modellergebnisse habe ich mich besonders auf die Recall-Werte der als Betrug gekennzeichneten Klasse konzentriert. Da diese Klasse deutlich weniger Datenpunkte im Datensatz aufweist, ist der Recall-Wert von besonderer Bedeutung. Ein hoher Recall-Wert ist entscheidend, um sicherzustellen, dass die meisten Betrugsfälle korrekt identifiziert werden, selbst wenn das die Genauigkeit bei der Identifizierung legitimer Transaktionen leicht beeinträchtigt.
 
 ![plot_df_result](https://github.com/Murgatroyd-K/Kreditkarten_Betrugserkennung/assets/76660447/d128efa9-9592-4717-a15c-8e272fba392d)
-
+[Ergbnis als CSV](Data/train_result.csv)
 
 
 ### 3. Downsampling
@@ -93,7 +93,7 @@ Mit diesem ausgewogeneren Datensatz habe ich die vier ausgewählten Modelle – 
 Die Ergebnisse dieses zweiten Trainingsdurchlaufs waren aufschlussreich und zeigten deutliche Verbesserungen im Vergleich zu den anfänglichen Modellläufen.
 
 ![plot_df_result_down](https://github.com/Murgatroyd-K/Kreditkarten_Betrugserkennung/assets/76660447/b8c4ac50-dfb6-4236-b1bc-34860613a2b5)
-
+[Ergbnis als CSV](Data/train_result_down.csv)
 
 
 ## Ergbnis
