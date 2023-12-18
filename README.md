@@ -3,19 +3,19 @@
 
 
 ## Inhaltsverzeichnis
-  - [Projektübersicht](#Projektübersicht)
-  - [Ziele](#Ziele)
-  - [Technologien und Werkzeuge](#Technologien-und-Werkzeuge)
-  - [Daten](#Daten)
-  - [Modellierung](#Modellierung)
-  - [Ablauf](#Ablauf)
+  - [Projektübersicht](pProjektübersicht)
+  - [Ziele](#ziele)
+  - [Technologien und Werkzeuge](#technologien-und-werkzeuge)
+  - [Daten](#daten)
+  - [Modellierung](#modellierung)
+  - [Ablauf](#ablauf)
     - [1. Analyse und transformieren der Quelldaten](#analyse-und-transformieren-der-quelldaten)
-    - [2. Aufsetzen der ML Modelle](##Aufsetzen-der-ML-Modelle)
-    - [3. Downsampling](#Downsampling)
-  - [Ergebnis](#Ergebnis)
-  - [Weiter Schritte](#Weiter-Schritte)
-  - [Data Bricks Notebook](#Link-zum-Databricks-Notebook)
-  - [Credits](#Credits)
+    - [2. Aufsetzen der ML Modelle](##aufsetzen-der-ml-modelle)
+    - [3. Downsampling](#downsampling)
+  - [Ergebnis](#ergebnis)
+  - [Weiter Schritte](#weiter-schritte)
+  - [Data Bricks Notebook](#link-zum-databricks-notebook)
+  - [Credits](#credits)
 
 ## Projektübersicht
 Dieses Projekt zielt darauf ab, betrügerische Transaktionen in Kreditkartendaten unter Verwendung fortschrittlicher Machine Learning-Techniken zu identifizieren. Der verwendete Datensatz besteht aus Transaktionen von europäischen Karteninhabern im September 2013, die mithilfe der Hauptkomponentenanalyse (PCA) transformiert wurden, um die Anonymität der Nutzer zu gewährleisten.
