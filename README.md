@@ -14,7 +14,8 @@
     - [3. Downsampling](#3._Downsampling)
   - [Ergebnis](#Ergebnis)
   - [Weiter Schritte](#Weiter_Schritte)
-  - [Data Bricks Notebook](###Link_zum_Databricks_Notebook)
+  - [Data Bricks Notebook](#Link_zum_Databricks_Notebook)
+  - [Credits](#Credits)
 
 ## Projektübersicht
 Dieses Projekt zielt darauf ab, betrügerische Transaktionen in Kreditkartendaten unter Verwendung fortschrittlicher Machine Learning-Techniken zu identifizieren. Der verwendete Datensatz besteht aus Transaktionen von europäischen Karteninhabern im September 2013, die mithilfe der Hauptkomponentenanalyse (PCA) transformiert wurden, um die Anonymität der Nutzer zu gewährleisten.
@@ -135,3 +136,5 @@ Der Plan wäre, mit einem breiten Spektrum an Parametereinstellungen zu beginnen
 
 ## Link zum Databricks Notebook
 https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/1881572392991630/2975787479060580/5681538385804398/latest.html
+## Credits
+Text und Titelbild: Generiert von GPT-4 (OpenAI)
