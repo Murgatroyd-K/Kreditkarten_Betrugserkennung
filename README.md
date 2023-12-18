@@ -10,7 +10,7 @@
     - [1. Analyse und transformieren der Quelldaten](#1._Analyse_und_transformieren_der_Quelldaten)
     - [2. Aufsetzen der ML Modelle](#2._Aufsetzen_der_ML_Modelle)
     - [3. Downsampling](#3._Downsampling)
-  - [Ergbnis](#Ergbnis)
+  - [Ergebnis](#Ergebnis)
   - [Weiter Schritte](#Weiter_Schritte)
 
 ## Projektübersicht
@@ -51,7 +51,7 @@ Für das Merkmal 'Amount' entschied ich mich für die Anwendung des RobustScaler
 
 Beim Umgang mit dem Merkmal 'Time' ging ich anders vor. Hier skalierte ich die Werte in einen Bereich zwischen 0 und 1. Diese Normalisierung war entscheidend, um die zeitliche Dimension der Daten handhabbar zu machen und eine Überbetonung dieses Merkmals im Vergleich zu den anderen transformierten Merkmalen zu vermeiden.
 
-Das Ergbnis des Transformieren:
+Das Ergebnis des Transformieren:
 
 | summary |        Amount         |   | summary |       Scal_Amount       |
 |---------|-----------------------|---|---------|-------------------------|
@@ -82,7 +82,7 @@ Nach der sorgfältigen Vorbereitung und Normalisierung der Daten habe ich mich d
 Bei der Analyse der Modellergebnisse habe ich mich besonders auf die Recall-Werte der als Betrug gekennzeichneten Klasse konzentriert. Da diese Klasse deutlich weniger Datenpunkte im Datensatz aufweist, ist der Recall-Wert von besonderer Bedeutung. Ein hoher Recall-Wert ist entscheidend, um sicherzustellen, dass die meisten Betrugsfälle korrekt identifiziert werden, selbst wenn das die Genauigkeit bei der Identifizierung legitimer Transaktionen leicht beeinträchtigt.
 
 ![plot_df_result](https://github.com/Murgatroyd-K/Kreditkarten_Betrugserkennung/assets/76660447/d128efa9-9592-4717-a15c-8e272fba392d)
-[Ergbnis als CSV](Data/train_result.csv)
+[Ergebnis als CSV](Data/train_result.csv)
 
 
 ### 3. Downsampling
@@ -93,9 +93,9 @@ Mit diesem ausgewogeneren Datensatz habe ich die vier ausgewählten Modelle – 
 Die Ergebnisse dieses zweiten Trainingsdurchlaufs waren aufschlussreich und zeigten deutliche Verbesserungen im Vergleich zu den anfänglichen Modellläufen.
 
 ![plot_df_result_down](https://github.com/Murgatroyd-K/Kreditkarten_Betrugserkennung/assets/76660447/b8c4ac50-dfb6-4236-b1bc-34860613a2b5)
-[Ergbnis als CSV](Data/train_result_down.csv)
+[Ergebnis als CSV](Data/train_result_down.csv)
 
 
-## Ergbnis
+## Ergebnis
 
 ## Weiter Schritte
