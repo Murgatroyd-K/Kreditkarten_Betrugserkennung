@@ -138,4 +138,5 @@ Der Plan wäre, mit einem breiten Spektrum an Parametereinstellungen zu beginnen
 https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/1881572392991630/2975787479060580/5681538385804398/latest.html
 ## Credits
 Text und Titelbild: Generiert von GPT-4 (OpenAI)
+
 Daten : [Originaldatensatz auf Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud/data)
