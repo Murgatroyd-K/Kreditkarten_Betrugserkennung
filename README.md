@@ -1,6 +1,6 @@
 # Kreditkarten-Betrugserkennung
 
-##Inhaltsverzeichnis
+## Inhaltsverzeichnis
   - [Projektübersicht](#Projektübersicht)
   - [Ziele](#Ziele)
   - [Technologien und Werkzeuge](#Technologien_und_Werkzeuge)
