@@ -5,16 +5,16 @@
 ## Inhaltsverzeichnis
   - [Projektübersicht](#Projektübersicht)
   - [Ziele](#Ziele)
-  - [Technologien und Werkzeuge](#Technologien_und_Werkzeuge)
+  - [Technologien und Werkzeuge](#Technologien-und-Werkzeuge)
   - [Daten](#Daten)
   - [Modellierung](#Modellierung)
   - [Ablauf](#Ablauf)
-    - [1. Analyse und transformieren der Quelldaten](##_1._Analyse_und_transformieren_der_Quelldaten)
-    - [2. Aufsetzen der ML Modelle](##_2._Aufsetzen_der_ML_Modelle)
-    - [3. Downsampling](##_3._Downsampling)
+    - [1. Analyse und transformieren der Quelldaten](#Analyse-und-transformieren-der-Quelldaten)
+    - [2. Aufsetzen der ML Modelle](##Aufsetzen-der-ML-Modelle)
+    - [3. Downsampling](#Downsampling)
   - [Ergebnis](#Ergebnis)
-  - [Weiter Schritte](#Weiter_Schritte)
-  - [Data Bricks Notebook](#Link_zum_Databricks_Notebook)
+  - [Weiter Schritte](#Weiter-Schritte)
+  - [Data Bricks Notebook](#Link-zum-Databricks-Notebook)
   - [Credits](#Credits)
 
 ## Projektübersicht
