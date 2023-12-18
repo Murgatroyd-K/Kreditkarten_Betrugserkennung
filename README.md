@@ -9,7 +9,7 @@
   - [Daten](#Daten)
   - [Modellierung](#Modellierung)
   - [Ablauf](#Ablauf)
-    - [1. Analyse und transformieren der Quelldaten](#Analyse-und-transformieren-der-Quelldaten)
+    - [1. Analyse und transformieren der Quelldaten](#analyse-und-transformieren-der-quelldaten)
     - [2. Aufsetzen der ML Modelle](##Aufsetzen-der-ML-Modelle)
     - [3. Downsampling](#Downsampling)
   - [Ergebnis](#Ergebnis)
