@@ -25,11 +25,11 @@ Dieses Projekt zielt darauf ab, betrügerische Transaktionen in Kreditkartendate
 - **Adressierung der Unausgeglichenheit im Datensatz**: Umsetzung von Techniken zur Bewältigung der starken Asymmetrie im Datensatz, insbesondere der geringen Anzahl an Betrugsfällen.
 - **Evaluierung der Modellleistung**: Fokus auf Schlüsselmetriken wie Precision, Recall und F1-Score, um eine umfassende Bewertung der Modellgenauigkeit und -zuverlässigkeit sicherzustellen, insbesondere im Hinblick auf die Identifizierung von Betrugsfällen.
 
-## Technologien_und_Werkzeuge
+## Technologien undWerkzeuge
 - **Programmiersprache**: Python
 - **Hauptbibliotheken**: Pyspark
 - **Datenvisualisierung**: Matplotlib,Databricks
-- - **Entwicklungswerkzeuge**:Databricks community edition
+- **Entwicklungswerkzeuge**:Databricks community edition
 
 ## Daten
 Der Datensatz enthält Transaktionen über zwei Tage mit 492 Betrugsfällen aus insgesamt 284,807 Transaktionen. Die Features 'Time' und 'Amount' sind die einzigen, die nicht durch PCA transformiert wurden.
