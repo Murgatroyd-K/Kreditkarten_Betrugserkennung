@@ -44,25 +44,21 @@ Für das Merkmal 'Amount' entschied ich mich für die Anwendung des RobustScaler
 
 Beim Umgang mit dem Merkmal 'Time' ging ich anders vor. Hier skalierte ich die Werte in einen Bereich zwischen 0 und 1. Diese Normalisierung war entscheidend, um die zeitliche Dimension der Daten handhabbar zu machen und eine Überbetonung dieses Merkmals im Vergleich zu den anderen transformierten Merkmalen zu vermeiden.
 
-+-------+------------------+	+-------+------------------+
-|summary|            Amount|	|summary|       Scal_Amount|
-+-------+------------------+	+-------+------------------+
-|  count|            284807|	|  count|            284807|
-|   mean| 88.34961925093698|	|   mean| 1.237562953507917|
-| stddev|250.12010924018836| 	| stddev| 3.503573459030513|
-|    min|               0.0| 	|    min|               0.0|
-|    max|          25691.16|  |    max|359.87057010785827|
-+-------+------------------+	+-------+------------------+
+| summary |       Scal_Amount       |   | summary |        Amount         |
+|---------|-------------------------|---|---------|-----------------------|
+| count   | 284807                  |   | count   | 284807                |
+| mean    | 1.237562953507917       |   | mean    | 88.34961925093698     |
+| stddev  | 3.503573459030513       |   | stddev  | 250.12010924018836    |
+| min     | 0.0                     |   | min     | 0.0                   |
+| max     | 359.87057010785827      |   | max     | 25691.16              |
 
-+-------+------------------+	+-------+------------------+
-|summary|              Time|	|summary|         Scal_Time|
-+-------+------------------+	+-------+------------------+
-|  count|            284807|	|  count|            284807|
-|   mean| 94813.85957508067|	|   mean| 0.548716720537296|
-| stddev|47488.145954566266|	| stddev|0.2748283829955438|
-|    min|               0.0|	|    min|               0.0|
-|    max|          172792.0|	|    max|               1.0|
-+-------+------------------+	+-------+------------------+
+| summary |       Time             |   | summary |       Scal_Time       |
+|---------|-------------------------|---|---------|-----------------------|
+| count   | 284807                  |   | count   | 284807                |
+| mean    | 94813.85957508067       |   | mean    | 0.548716720537296     |
+| stddev  | 47488.145954566266      |   | stddev  | 0.2748283829955438    |
+| min     | 0.0                     |   | min     | 0.0                   |
+| max     | 172792.0                |   | max     | 1.0                   |
 
 
 ### 2. Aufsetzen der ML Modelle
