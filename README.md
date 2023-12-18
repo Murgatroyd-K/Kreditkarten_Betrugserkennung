@@ -1,5 +1,5 @@
 # Kreditkarten-Betrugserkennung
-![Uploading DALL·E 2023-12-18 12.35.06 - A banner depicting the theme of credit card fraud, sized 1800x600 pixels. The image showcases a large, threatening credit card overshadowing a backgro.png…]()
+![DALL·E 2023-12-18 12 35 06 - A banner depicting the theme of credit card fraud, sized 1800x600 pixels  The image showcases a large, threatening credit card overshadowing a backgro](https://github.com/Murgatroyd-K/Kreditkarten_Betrugserkennung/assets/76660447/4fc5bdeb-2189-40fa-a2b5-a0bf87a69145)
 
 
 ## Inhaltsverzeichnis
