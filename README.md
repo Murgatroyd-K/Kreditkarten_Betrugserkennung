@@ -38,9 +38,9 @@ Es werden verschiedene Klassifizierungsalgorithmen getestet und verglichen, eins
 
 ### 1. Analyse und transformieren der Quelldaten
 
-Zu Beginn des Projekts konzentrierte ich mich auf die eingehende Analyse der vorhandenen Daten. Dabei stellte ich fest, dass die meisten Spalten der Daten mittels Principal Component Analysis (PCA) transformiert wurden. Dies beschränkte die unmittelbare Interpretierbarkeit der Daten, was eine Herausforderung darstellte. Zwei Merkmale jedoch, 'Time' und 'Amount', waren von dieser Transformation ausgenommen.
+Zu Beginn des Projekts konzentrierte ich mich auf die eingehende Analyse der vorhandenen Daten. Dabei stellte ich fest, dass die meisten Spalten der Daten mittels Principal Component Analysis (PCA) transformiert wurden. Dies beschränkte die unmittelbare Interpretierbarkeit der Daten, was eine Herausforderung darstellte. Zwei Merkmale jedoch,'Class', 'Time' und 'Amount', waren von dieser Transformation ausgenommen.
 
-![hist_all](https://github.com/Murgatroyd-K/Kreditkarten_Betrugserkennung/assets/76660447/2ce26385-1768-4027-af29-cc992230bc0e)
+![hist_all_with-back](https://github.com/Murgatroyd-K/Kreditkarten_Betrugserkennung/assets/76660447/468a664c-fdf3-410d-b6b4-699a37402e8b)
 
 
 Für das Merkmal 'Amount' entschied ich mich für die Anwendung des RobustScaler, um die Daten zu normalisieren. Diese Methode wurde gewählt, da sie effizient mit Ausreißern umgeht, die in finanziellen Transaktionsdaten häufig vorkommen. Durch die Skalierung der 'Amount'-Daten konnte ich sicherstellen, dass sie in einem Bereich liegen, der für maschinelle Lernalgorithmen zugänglicher ist.
