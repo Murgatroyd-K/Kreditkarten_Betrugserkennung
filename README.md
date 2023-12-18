@@ -40,9 +40,14 @@ Es werden verschiedene Klassifizierungsalgorithmen getestet und verglichen, eins
 
 Zu Beginn des Projekts konzentrierte ich mich auf die eingehende Analyse der vorhandenen Daten. Dabei stellte ich fest, dass die meisten Spalten der Daten mittels Principal Component Analysis (PCA) transformiert wurden. Dies beschränkte die unmittelbare Interpretierbarkeit der Daten, was eine Herausforderung darstellte. Zwei Merkmale jedoch, 'Time' und 'Amount', waren von dieser Transformation ausgenommen.
 
+![hist_all](https://github.com/Murgatroyd-K/Kreditkarten_Betrugserkennung/assets/76660447/2ce26385-1768-4027-af29-cc992230bc0e)
+
+
 Für das Merkmal 'Amount' entschied ich mich für die Anwendung des RobustScaler, um die Daten zu normalisieren. Diese Methode wurde gewählt, da sie effizient mit Ausreißern umgeht, die in finanziellen Transaktionsdaten häufig vorkommen. Durch die Skalierung der 'Amount'-Daten konnte ich sicherstellen, dass sie in einem Bereich liegen, der für maschinelle Lernalgorithmen zugänglicher ist.
 
 Beim Umgang mit dem Merkmal 'Time' ging ich anders vor. Hier skalierte ich die Werte in einen Bereich zwischen 0 und 1. Diese Normalisierung war entscheidend, um die zeitliche Dimension der Daten handhabbar zu machen und eine Überbetonung dieses Merkmals im Vergleich zu den anderen transformierten Merkmalen zu vermeiden.
+
+Das Ergbnis des Transformieren:
 
 | summary |       Scal_Amount       |   | summary |        Amount         |
 |---------|-------------------------|---|---------|-----------------------|
@@ -52,7 +57,7 @@ Beim Umgang mit dem Merkmal 'Time' ging ich anders vor. Hier skalierte ich die W
 | min     | 0.0                     |   | min     | 0.0                   |
 | max     | 359.87057010785827      |   | max     | 25691.16              |
 
-| summary |       Time             |   | summary |       Scal_Time       |
+| summary |       Time              |   | summary |       Scal_Time       |
 |---------|-------------------------|---|---------|-----------------------|
 | count   | 284807                  |   | count   | 284807                |
 | mean    | 94813.85957508067       |   | mean    | 0.548716720537296     |
