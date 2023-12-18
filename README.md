@@ -1,4 +1,4 @@
-# Kreditkarten-Betrugserkennung
+[df_result_down.csv](https://github.com/Murgatroyd-K/Kreditkarten_Betrugserkennung/files/13702269/df_result_down.csv)[df_result.csv](https://github.com/Murgatroyd-K/Kreditkarten_Betrugserkennung/files/13702266/df_result.csv)# Kreditkarten-Betrugserkennung
 
 ## Inhaltsverzeichnis
   - [Projektübersicht](#Projektübersicht)
@@ -11,6 +11,7 @@
     - [2. Aufsetzen der ML Modelle](#2._Aufsetzen_der_ML_Modelle)
     - [3. Downsampling](#3._Downsampling)
   - [Ergbnis](#Ergbnis)
+  - [Weiter Schritte](#Weiter_Schritte)
 
 ## Projektübersicht
 Dieses Projekt zielt darauf ab, betrügerische Transaktionen in Kreditkartendaten unter Verwendung fortschrittlicher Machine Learning-Techniken zu identifizieren. Der verwendete Datensatz besteht aus Transaktionen von europäischen Karteninhabern im September 2013, die mithilfe der Hauptkomponentenanalyse (PCA) transformiert wurden, um die Anonymität der Nutzer zu gewährleisten.
@@ -52,21 +53,22 @@ Beim Umgang mit dem Merkmal 'Time' ging ich anders vor. Hier skalierte ich die W
 
 Das Ergbnis des Transformieren:
 
-| summary |       Scal_Amount       |   | summary |        Amount         |
-|---------|-------------------------|---|---------|-----------------------|
-| count   | 284807                  |   | count   | 284807                |
-| mean    | 1.237562953507917       |   | mean    | 88.34961925093698     |
-| stddev  | 3.503573459030513       |   | stddev  | 250.12010924018836    |
-| min     | 0.0                     |   | min     | 0.0                   |
-| max     | 359.87057010785827      |   | max     | 25691.16              |
+| summary |        Amount         |   | summary |       Scal_Amount       |
+|---------|-----------------------|---|---------|-------------------------|
+| count   | 284807                |   | count   | 284807                  |
+| mean    | 88.34961925093698     |   | mean    | 1.237562953507917       |
+| stddev  | 250.12010924018836    |   | stddev  | 3.503573459030513       |
+| min     | 0.0                   |   | min     | 0.0                     |
+| max     | 25691.16              |   | max     | 359.87057010785827      |
 
-| summary |       Time             |   | summary |       Scal_Time       |
-|---------|------------------------|---|---------|-----------------------|
-| count   | 284807                 |   | count   | 284807                |
-| mean    | 94813.85957508067      |   | mean    | 0.548716720537296     |
-| stddev  | 47488.145954566266     |   | stddev  | 0.2748283829955438    |
-| min     | 0.0                    |   | min     | 0.0                   |
-| max     | 172792.0               |   | max     | 1.0                   |
+| summary |       Time            |   | summary |       Scal_Time         |
+|---------|-----------------------|---|---------|-------------------------|
+| count   | 284807                |   | count   | 284807                  |
+| mean    | 94813.85957508067     |   | mean    | 0.548716720537296       |
+| stddev  | 47488.145954566266    |   | stddev  | 0.2748283829955438      |
+| min     | 0.0                   |   | min     | 0.0                     |
+| max     | 172792.0              |   | max     | 1.0                     |
+
 
 
 ### 2. Aufsetzen der ML Modelle
@@ -79,13 +81,40 @@ Nach der sorgfältigen Vorbereitung und Normalisierung der Daten habe ich mich d
 
 Bei der Analyse der Modellergebnisse habe ich mich besonders auf die Recall-Werte der als Betrug gekennzeichneten Klasse konzentriert. Da diese Klasse deutlich weniger Datenpunkte im Datensatz aufweist, ist der Recall-Wert von besonderer Bedeutung. Ein hoher Recall-Wert ist entscheidend, um sicherzustellen, dass die meisten Betrugsfälle korrekt identifiziert werden, selbst wenn das die Genauigkeit bei der Identifizierung legitimer Transaktionen leicht beeinträchtigt.
 
+![plot_df_result](https://github.com/Murgatroyd-K/Kreditkarten_Betrugserkennung/assets/76660447/d128efa9-9592-4717-a15c-8e272fba392d)
+
+[UploadiF1 Score,Label,Model,Precision,Recall
+0.9996820574416221,0,lr,0.9994349085258176,0.9999293286219081
+0.7804878048780487,1,lr,0.9411764705882353,0.6666666666666666
+0.9997880083383387,0,gbt,0.9996820462092842,0.9998939929328622
+0.8666666666666666,1,gbt,0.9285714285714286,0.8125
+0.9996997262209664,0,lsvc,0.9994349284831362,0.9999646643109541
+0.7901234567901234,1,lsvc,0.9696969696969697,0.6666666666666666
+0.9997880233174351,0,rf,0.9996114447191805,0.9999646643109541
+0.8604651162790697,1,rf,0.9736842105263158,0.7708333333333334
+ng df_result.csv…]()
+
+
 ### 3. Downsampling
 Nach der ersten Analyse und Bewertung der verschiedenen Modelle habe ich einen weiteren entscheidenden Schritt unternommen, um die Genauigkeit und Effizienz der Modelle zu verbessern. Mir wurde klar, dass das Ungleichgewicht zwischen der Anzahl der Betrugsfälle und der Anzahl der legitimen Transaktionen im Datensatz eine Herausforderung darstellte. Um dieses Problem zu adressieren und ein ausgewogeneres Trainingsset zu schaffen, habe ich die Anzahl der Nicht-Betrugsfälle auf dieselbe Anzahl wie die Betrugsfälle reduziert. Diese Technik, bekannt als Downsampling, hilft dabei, ein Modell zu trainieren, das nicht von der überwiegenden Klasse voreingenommen ist.
 
 Mit diesem ausgewogeneren Datensatz habe ich die vier ausgewählten Modelle – Random Forest, Gradient Boosting, Logistic Regression und Linear Support Vector Classifier – erneut trainiert. Diese erneute Trainingssitzung ermöglichte es, die Leistungsfähigkeit der Modelle unter faireren und realistischeren Bedingungen zu beurteilen. Durch diese Anpassung erwartete ich eine signifikante Verbesserung im Recall-Wert für die Betrugserkennung, da das Modell nun gleichermaßen auf beide Klassen trainiert wurde.
 
-
 Die Ergebnisse dieses zweiten Trainingsdurchlaufs waren aufschlussreich und zeigten deutliche Verbesserungen im Vergleich zu den anfänglichen Modellläufen.
 
+![plot_df_result_down](https://github.com/Murgatroyd-K/Kreditkarten_Betrugserkennung/assets/76660447/b8c4ac50-dfb6-4236-b1bc-34860613a2b5)
 
-##Ergbnis
+[Uploading df_rF1 Score,Label,Model,Precision,Recall
+0.8971962616822429,0,lr,0.8421052631578947,0.96
+0.8971962616822429,1,lr,0.96,0.8421052631578947
+0.9259259259259259,0,rf,0.8620689655172413,1
+0.9245283018867925,1,rf,1,0.8596491228070176
+0.8431372549019608,0,gbt,0.8269230769230769,0.86
+0.8571428571428571,1,gbt,0.8727272727272727,0.8421052631578947
+0.882882882882883,0,lsvc,0.8032786885245902,0.98
+0.8737864077669902,1,lsvc,0.9782608695652174,0.7894736842105263
+esult_down.csv…]()
+
+## Ergbnis
+
+## Weiter Schritte
