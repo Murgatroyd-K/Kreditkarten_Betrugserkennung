@@ -3,13 +3,13 @@
 ##Inhaltsverzeichnis
   - [Projektübersicht](#Projektübersicht)
   - [Ziele](#Ziele)
-  - [Technologien_und_Werkzeuge](#Technologien_und_Werkzeuge)
+  - [Technologien und Werkzeuge](#Technologien_und_Werkzeuge)
   - [Daten](#Daten)
   - [Modellierung](#Modellierung)
   - [Ablauf](#Ablauf)
-    - [1. Analyse und transformieren der Quelldaten](#1. Analyse und transformieren der Quelldaten)
-    - [3. Downsampling](#3. Downsampling)
-    - [Ablauf](#Ablauf)
+    - [1. Analyse und transformieren der Quelldaten](#1._Analyse_und_transformieren_der_Quelldaten)
+    - [2. Aufsetzen der ML Modelle](#2._Aufsetzen_der_ML_Modelle)
+    - [3. Downsampling](#3._Downsampling)
   - [Ergbnis](#Ergbnis)
 
 ## Projektübersicht
