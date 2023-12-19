@@ -76,7 +76,7 @@ Das Ergebnis des Transformieren:
 
 
 2. ### Aufsetzen der ML Modelle
-Nach der sorgfältigen Vorbereitung und Normalisierung der Daten habe ich mich darauf konzentriert, verschiedene Machine Learning-Modelle zu evaluieren, um das Potenzial jeder Methode in Bezug auf die spezifischen Anforderungen des Projekts zu bestimmen. Zu diesem Zweck habe ich folgende Modelle implementiert:
+Nach der sorgfältigen Vorbereitung und Normalisierung der Daten, wobei ich darauf geachtet habe, die Daten in 80% Trainings-, 10% Test- und 10% Validierungsdaten aufzuteilen, habe ich mich darauf konzentriert, verschiedene Machine Learning-Modelle zu evaluieren. Ziel war es, das Potenzial jeder Methode in Bezug auf die spezifischen Anforderungen des Projekts zu bestimmen. Zu diesem Zweck habe ich folgende Modelle implementiert:
 
 - **Logistic Regression**: Als klassisches Modell in der statistischen Modellierung und im maschinellen Lernen, wurde die logistische Regression eingesetzt, um eine Baseline für die Performance zu setzen und die Ergebnisse mit komplexeren Modellen zu vergleichen.
 - **Random Forest**: Dieser Ansatz ist bekannt für seine Robustheit und gute Performance bei einer Vielzahl von Aufgaben. Random Forest eignet sich besonders gut für komplexe Datensätze, da er mehrere Entscheidungsbäume kombiniert und dadurch die Gefahr des Overfittings reduziert.
