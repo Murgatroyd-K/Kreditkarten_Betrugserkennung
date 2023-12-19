@@ -111,8 +111,6 @@ Diese Ergebnisse verdeutlichen die entscheidende Bedeutung der Wahl der Datenvor
 
 Basierend auf diesen Beobachtungen und der Tatsache, dass das Gradient Boosting Modell die besten Ergebnisse auf den Validierungsdaten zeigte, wurde es ausgewählt, um auf dem Testdatensatz angewendet zu werden.
 
-Das Ergbnis mit den Testdaten Ergibt:
-
 Gradient Boosting ohne Downsampling:
 
 | Label | Precision          | Recall             | F1 Score          |
