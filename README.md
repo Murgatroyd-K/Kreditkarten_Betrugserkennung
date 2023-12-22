@@ -101,15 +101,15 @@ Die Ergebnisse dieses zweiten Trainingsdurchlaufs waren aufschlussreich und zeig
 
 
 ## Ergebnis
-Die Bewertung der Modellleistung des Gradient Boosting Modells zeigt, dass das Downsampling des Datensatzes, bei dem die Mehrheitsklasse reduziert wird, zu unterschiedlichen Ergebnissen führt. Nach dem Downsampling erreicht das Modell für die Klasse 'Kein Betrug' eine Präzision von nahezu 1,0 und einen Recall von etwa 0,944. Dies deutet auf eine effektive Erkennung der tatsächlichen Fälle der Mehrheitsklasse hin, mit einer hohen Vermeidungsrate von Falsch-Positiven. Der F1 Score von rund 0,971 bestätigt diese hohe Leistung.
+Die Bewertung der Modellleistung des Gradient Boosting Modells zeigt, dass das Downsampling des Datensatzes, bei dem die Mehrheitsklasse reduziert wird, zu unterschiedlichen Ergebnissen führt. Nach dem Downsampling erreicht das Modell für die Klasse 'Kein Betrug' eine Präzision von nahezu 0,9998876656931027 und einen Recall von etwa 0,9475869410929737. Dies deutet auf eine effektive Erkennung der tatsächlichen Fälle der Mehrheitsklasse hin, mit einer hohen Vermeidungsrate von Falsch-Positiven. Der F1 Score von rund 0,9730350180373866 bestätigt diese hohe Leistung.
 
-Für die Klasse 'Betrug', die potenziell betrügerische Überweisungen repräsentiert, zeigt das Modell nach dem Downsampling einen extrem hohen Recall von 0,975. Dies bedeutet, dass fast alle tatsächlichen Betrugsfälle identifiziert werden. Die Präzision ist jedoch mit einem Wert von 0,024 sehr gering, was auf eine hohe Anzahl von Falsch-Positiven hinweist; die meisten als Betrug erkannten Fälle sind tatsächlich keine. Daraus resultiert ein niedriger F1 Score von ungefähr 0,047, was eine suboptimale Balance zwischen Precision und Recall anzeigt.
+Für die Klasse 'Betrug', die potenziell betrügerische Überweisungen repräsentiert, zeigt das Modell nach dem Downsampling einen hohen Recall von 0,925. Dies bedeutet, dass fast alle tatsächlichen Betrugsfälle identifiziert werden, jedoch ist die Präzision mit einem Wert von 0,02443857331571995 sehr gering. Diese niedrige Präzision resultiert in einer hohen Anzahl von Falsch-Positiven, was bedeutet, dass viele der als Betrug erkannten Fälle tatsächlich legitim sind. Daraus ergibt sich ein F1 Score von ungefähr 0,047619047619047616, was eine suboptimale Balance zwischen Precision und Recall anzeigt.
 
-Ohne Downsampling zeigt das Modell für die Klasse 'Kein Betrug' nahezu perfekte Präzision und Recall, was sich in einem F1 Score von etwa 0,999 widerspiegelt. Dies ist ein Indikator für eine nahezu fehlerfreie Klassifikation. Bei der Klasse 'Betrug' ist die Präzision mit einem Wert von rund 0,941 deutlich höher als beim downgesampelten Modell, während der Recall auf 0,8 sinkt. Der daraus resultierende F1 Score von etwa 0,865 zeigt eine wesentlich bessere Balance zwischen Precision und Recall als beim downgesampelten Modell.
+Diese Ergebnisse spiegeln die Komplexität und Herausforderungen wider, die mit dem Downsampling in der Praxis verbunden sind. Es zeigt sich, dass, obwohl das Downsampling effektiv dabei sein kann, seltene Ereignisse wie Betrug zu identifizieren, es gleichzeitig zu einer erhöhten Anzahl von falsch positiven Ergebnissen führen kann. Dies kann in der Praxis zu zusätzlichem Aufwand bei der Überprüfung der als betrügerisch gekennzeichneten Transaktionen führen.
 
-Diese Ergebnisse verdeutlichen die entscheidende Bedeutung der Wahl der Datenvorbereitungsmethoden für die Modellleistung. Während Downsampling die Erkennung seltener Ereignisse maximiert, kann es gleichzeitig die Anzahl der Falsch-Positiven erhöhen. Dies kann in der Praxis zu zusätzlichem Aufwand bei der Überprüfung der als betrügerisch gekennzeichneten Transaktionen führen. Umgekehrt kann ein unausgeglichener Datensatz ohne Downsampling zu einer höheren Genauigkeit bei der Identifizierung von Betrugsfällen führen, jedoch auf Kosten einer potenziell niedrigeren Entdeckungsrate. Dies betont die Notwendigkeit, eine ausgewogene Strategie zu finden, die sowohl hohe Präzision als auch hohen Recall bietet, um die Effizienz und Wirksamkeit in der Betrugserkennung zu optimieren.
+Im Gegensatz dazu zeigt das Modell ohne Downsampling für die Klasse 'Kein Betrug' nahezu perfekte Präzision und Recall, was sich in einem F1 Score von etwa 0,999 widerspiegelt. Dies ist ein Indikator für eine nahezu fehlerfreie Klassifikation. Bei der Klasse 'Betrug' ist die Präzision mit einem Wert von rund 0,941 deutlich höher als beim downgesampelten Modell, während der Recall auf 0,8 sinkt. Der daraus resultierende F1 Score von etwa 0,865 zeigt eine wesentlich bessere Balance zwischen Precision und Recall als beim downgesampelten Modell.
 
-Basierend auf diesen Beobachtungen und der Tatsache, dass das Gradient Boosting Modell die besten Ergebnisse auf den Validierungsdaten zeigte, wurde es ausgewählt, um auf dem Testdatensatz angewendet zu werden.
+Diese Beobachtungen unterstreichen die Notwendigkeit einer ausgewogenen Strategie bei der Datenvorbereitung und Modellbildung. Es ist entscheidend, eine Balance zu finden, die sowohl hohe Präzision als auch hohen Recall bietet, um die Effizienz und Wirksamkeit in der Betrugserkennung zu optimieren. Basierend auf diesen Überlegungen und der Tatsache, dass das Gradient Boosting Modell die besten Ergebnisse auf den Validierungsdaten zeigte, wurde es ausgewählt, um auf dem Testdatensatz angewendet zu werden.
 
 Gradient Boosting ohne Downsampling:
 
@@ -122,8 +122,8 @@ Gradient Boosting mit Downsampling:
 
 | Label | Precision              | Recall             | F1 Score          |
 |-------|------------------------|--------------------|-------------------|
-| 0.0   | 0.9999624173180999     | 0.944180269694819  | 0.9712710812586699|
-| 1.0   | 0.024193548387096774   | 0.975              | 0.0472154963680387|
+| 0.0   | 0.9998876656931027     | 0.9475869410929737 | 0.9730350180373866|
+| 1.0   | 0.02443857331571995    | 0.925              | 0.0476190476190476|
 
 ## Weiter Schritte
 Um die Leistung des Klassifikationsmodells zu verbessern und es weiter zu optimieren, sollte man sich auf Hyperparameter-Tuning konzentrieren:
