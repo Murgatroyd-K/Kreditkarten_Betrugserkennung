@@ -96,7 +96,7 @@ Mit diesem ausgewogeneren Datensatz habe ich die vier ausgewählten Modelle – 
 
 Die Ergebnisse dieses zweiten Trainingsdurchlaufs waren aufschlussreich und zeigten deutliche Verbesserungen im Vergleich zu den anfänglichen Modellläufen.
 
-![plot_df_result_down](https://github.com/Murgatroyd-K/Kreditkarten_Betrugserkennung/assets/76660447/b8c4ac50-dfb6-4236-b1bc-34860613a2b5)
+![newplot-2](https://github.com/Murgatroyd-K/Kreditkarten_Betrugserkennung/assets/76660447/b0df8b1c-47d6-49e0-ab4b-a31e46b0d6ac)
 [Ergebnis als CSV](Data/train_result_down.csv)
 
 
